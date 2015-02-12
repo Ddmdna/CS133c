@@ -1,0 +1,9 @@
+Exception: STATUS_ACCESS_VIOLATION at eip=00401459
+eax=612A3C34 ebx=0028AB90 ecx=0028AB8C edx=0028AB8C esi=0000002E edi=00000064
+ebp=0028AC08 esp=0028AB70 program=C:\Users\Ddmdna\Desktop\cStuff\randFun.exe, pid 86056, thread main
+cs=0023 ds=002B es=002B fs=0053 gs=002B ss=002B
+Stack trace:
+Frame     Function  Args
+0028AC08  00401459 (0000002E, 00000064, 0028ACF8, 61007FB5)
+0028ACF8  61007FB5 (00000000, 0028CD84, 61007120, 00000000)
+End of stack trace

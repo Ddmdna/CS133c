@@ -1,0 +1,7 @@
+Exception: STATUS_ACCESS_VIOLATION at eip=6113BB82
+eax=00000000 ebx=0000001E ecx=0028ABE8 edx=00000001 esi=00289834 edi=00000000
+ebp=61186C70 esp=00289660 program=C:\Users\Ddmdna\Desktop\cStuff\firelaws.exe, pid 33992, thread main
+cs=0023 ds=002B es=002B fs=0053 gs=002B ss=002B
+Stack trace:
+Frame     Function  Args
+End of stack trace
