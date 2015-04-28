@@ -1,6 +1,7 @@
 //dynamicFun.c
 #include <stdio.h>
 #include <stdlib.h>
+int dynamicFunction(int **dynamicIntArray);
 
 int main()
 {
@@ -12,24 +13,26 @@ int main()
 	
 	//Print the newly created array
 	int i;
+	printf("\nThe newly created array..\n");
 	for(i = 0; i < length; i++)
 	{
 		printf("%d: %d\n", i, dynamicIntArray_ptr[i]);
 	}
 	
 	//Free the memory dynamically allocated
+	free(dynamicIntArray_ptr);
 	
-	printf("Length: %d\n", length);
 	return 0;
 }
 
 //Accept a pointer to an int
-int dynamicFunction(int *dynamicIntArray)
+int dynamicFunction(int **dynamicIntArray)
 {
 	//Curently set such that the user won't get stuck inputting 100s of elements into an array
 	//This could be changed later to the maximum space available in memory, or the highest int value.(whichever caps first)
 	int sizeMin = 1;
 	int sizeMax = 20;
+	
 	//A guessed number such that the input works with getIntegerInRange.
 	//This could be the min and max integer values enabled by my system.
 	int inputMin = -1000000000;
@@ -50,7 +53,7 @@ int dynamicFunction(int *dynamicIntArray)
 	}
 	
 	//Create an array of int values dynamically
-	dynamicIntArray = malloc(size * sizeof(int));
+	*dynamicIntArray = (int*)malloc(size * sizeof(int));
 	
 	//Ask the user to input values to fill the newly created array
 	//Get verified user integer input for each element allocated for the array
@@ -61,21 +64,11 @@ int dynamicFunction(int *dynamicIntArray)
 		while(fillFlag)
 		{
 			printf("Enter an integer within range(%d to %d)\n(%d out of %d): ", inputMin, inputMax, i, size);
-			dynamicIntArray[i] = getIntegerInRange(inputMin, inputMax, 15, &fillFlag);
+			(*dynamicIntArray)[i] = getIntegerInRange(inputMin, inputMax, 15, &fillFlag);
 			if(fillFlag)
 				printf("Invalid Input\n");
 		}
 	}
-	
-	
-	
-	//Print the newly created array
-	for(i = 0; i < size; i++)
-	{
-		printf("%d: %d\n", i, dynamicIntArray[i]);
-	}
-	
-	
 	return size;
 }
 	

@@ -1,6 +1,8 @@
 //pointerFun.c
 #include <stdio.h>
 
+int pointerFunction();
+
 int main()
 {
 	//Exercise Component 1:

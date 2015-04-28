@@ -1,0 +1,9 @@
+Exception: STATUS_ACCESS_VIOLATION at eip=61126B64
+eax=80028738 ebx=FFFFFFFF ecx=00000000 edx=00000000 esi=80028730 edi=0000006D
+ebp=0028AC08 esp=0028AB90 program=C:\Users\Ddmdna\Documents\CS133c\cStuff\command.exe, pid 133568, thread main
+cs=0023 ds=002B es=002B fs=0053 gs=002B ss=002B
+Stack trace:
+Frame     Function  Args
+0028AC08  61126B64 (00000005, 0028AC2C, 800285B0, 0000004D)
+0028ACF8  61007FB5 (00000000, 0028CD84, 61007120, 00000000)
+End of stack trace
